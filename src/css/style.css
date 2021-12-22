@@ -1,0 +1,23 @@
+form{
+    margin: 0 auto;   
+    padding: 20px;
+    max-width: 13.5%; 
+    background-color: aquamarine;
+}
+/* .validation-enabled form:invalid .button{
+    opacity: 0.4;
+    pointer-events: none;
+}
+.error{
+    display: none;
+    color: red;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgb(248, 151, 151);
+}
+.validation-enabled input:invalid {
+    border: 2px solid red;
+}
+.validation-enabled input:invalid + .error{
+    display: block;
+} */

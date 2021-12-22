@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task_22</title>
+  <script src="./dist/app.bundle.js" defer></script>
+  <style>
+    .validation-enabled.form:invalid button[type="submit"] {
+      opacity: 0.4;
+      pointer-events: none;
+    }
+
+    .validation-enabled input:invalid {
+      border: 2px solid rgba(238, 49, 49, 0.623);
+    }
+
+    .error {
+      display: none;
+      color: red;
+      margin-top: 0.5rem;
+      padding: 0.5rem;
+      background-color: rgba(238, 49, 49, 0.342);
+    }
+
+    .validation-enabled input:invalid + .error {
+      display: block;
+    }
+
+  </style>
+</head>
+
+<body>
+  <form class = "form" id = "form" action="" novalidate>
+    <div><input type="text" required minlength="2" maxlength="20" placeholder="FirstName">
+    <div class="error">Обязательное поле, количество символов 2-20</div></div>
+    <br>
+    <div>
+      <input type="text" required minlength="2" maxlength="20" placeholder="LastName">
+      <div class="error">Обязательное поле, количество символов 2-20</div>
+    </div>
+    <br>
+    <div>
+      <input type="email"  required minlength="7" maxlength="20" placeholder="email">
+      <div class="error">Обязательное поле, количество символов 7-20</div>
+    </div>
+    <br>
+    <div>
+      <input type="phone" minlength="7" maxlength="20" placeholder="phone">
+    </div>
+    <br>
+    <div>
+      <input type="textarea" minlength="5" maxlength="50" placeholder="address">
+    </div>
+    <br>
+    <div>
+      <label for="">male</label>
+      <input type="radio" required>
+      <label for="">female</label>
+      <input type="radio" required>
+    </div>
+    <br>
+    <div>
+      <label for="">birthday</label>
+      <input type="number" required min="1" max="31">
+      <div class="error">Обязательное поле, выберите значение</div>
+    </div>
+    <br>
+    <div>
+      <label for="">monthBirth</label>
+      <input type="number" required min="1" max="12" >
+      <div class="error">Обязательное поле, выберите значение</div>
+    </div>
+    <br>
+    <div>
+      <label for="">yearBirth</label>
+      <input type="number" required min="1920" max="2021" >
+      <div class="error">Обязательное поле, выберите значение</div>
+    </div>
+    <br>
+    <div>
+      <label for="">AcceptAgreement</label>
+      <input type="checkbox" required placeholder="yearBirth">
+      <div class="error">Согласие обязательно</div>
+    </div>
+    <br>
+    <button type="submit">Send</button>
+  </form>
+</body>
+
+</html>
